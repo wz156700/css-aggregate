@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常规display:flex进行垂直水平居中</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .containner {
+        width: 100%;
+        height: 100%;
+        /* 水平居中 */
+        display: flex;
+        justify-content: center;
+      }
+      #item {
+        width: 500px;
+        height: 500px;
+        background: red;
+        /* 垂直居中 */
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containner">
+      <div id="item"></div>
+    </div>
+  </body>
+</html>
