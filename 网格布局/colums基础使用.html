@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:colums</title>
+    <style>
+        *{
+            margin: auto;
+            padding: auto;
+        }
+        
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .containner{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            /*grid-template-columns: 80px auto 100px; /* 表示网格分为3列，每列的宽度分别人80px auto 100px*/
+            /*grid-template-rows: 25% 100px auto 60px;/*表示网格分为4行，每行行高分别是 25% 100px auto 60px*/
+
+            /* grid-template-columns和grid-template-rows：可以简写为 grid-template或者grid*/
+            /* grid-template: 25% 100px auto 60px /  80px auto 100px; */
+            grid: 25% 100px auto 60px /  80px auto 100px;
+        }
+
+        .containner > div{
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+        }
+
+        .containner > div:nth-child(2n){
+            background-color: red;
+        }
+        .containner > div:nth-child(2n+1){
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="containner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

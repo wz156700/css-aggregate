@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const getData = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("data");
+        }, 2000);
+      });
+    };
+    async function test() {
+      console.log("start");
+      const v1 = await getData();
+      console.log(v1);
+      console.log("done");
+    }
+    async function test2() {
+      console.log("start2");
+      const v1 = await getData();
+      console.log(v1);
+      console.log("done2");
+    }
+    test();
+    console.log("outer");
+    test2();
+    console.log("outer2");
+    // start
+    // outer
+    // start2
+    // outer2
+    // data, start 1秒之后打印
+    // done1, 最后打印
+    // data
+    // done2
+  </script>
+</html>
